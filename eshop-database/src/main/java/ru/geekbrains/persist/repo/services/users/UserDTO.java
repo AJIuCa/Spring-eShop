@@ -1,18 +1,25 @@
 package ru.geekbrains.persist.repo.services.users;
 
+import ru.geekbrains.persist.model.Role;
 import ru.geekbrains.persist.model.User;
 
-import javax.validation.constraints.NotEmpty;
 
-public class UserRepr {
+import javax.validation.constraints.NotEmpty;
+import java.util.HashSet;
+import java.util.Set;
+
+public class UserDTO {
 
     private Long id;
 
-    @NotEmpty
+
     private String login;
 
-    @NotEmpty
+
     private String password;
+
+
+    private Set<Role> roles;
 
     public Long getId() {
         return id;
@@ -38,23 +45,37 @@ public class UserRepr {
         this.password = password;
     }
 
-    //    private Set<Role> roles;
-
-    public UserRepr() {
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-    public UserRepr(String login) {
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public UserDTO() {
+    }
+
+    public UserDTO(@NotEmpty String login, @NotEmpty Set<Role> roles) {
         this.login = login;
+        this.roles = roles;
         this.password = password;
     }
 
-    public UserRepr(User user) {
+    public UserDTO(User user) {
         this.id = user.getId();
         this.login = user.getLogin();
         this.password = user.getPassword();
-//        this.roles = new HashSet<>(user.getRoles());
+        this.roles = new HashSet<>(user.getRoles());
     }
 
-
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 
 }

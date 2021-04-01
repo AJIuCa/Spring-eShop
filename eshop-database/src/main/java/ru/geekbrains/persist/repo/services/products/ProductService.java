@@ -2,24 +2,25 @@ package ru.geekbrains.persist.repo.services.products;
 
 import org.springframework.data.domain.Page;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
 public interface ProductService {
 
-    List<ProductRepr> showAllProducts();
+    List<ProductDTO> showAllProducts();
 
-    Optional<ProductRepr> findProductById (Long id);
+    Optional<ProductDTO> findProductById (Long id);
 
-    void saveProduct (ProductRepr productRepr);
+    void saveProduct (ProductDTO productDTO) throws IOException;
 
     void deleteProductById (Long id);
 
-    Page<ProductRepr> findWithFilter(String productTitleFilter,
-                                     Integer minPriceFiler,
-                                     Integer maxPriceFilter,
-                                     Integer pageNumber,
-                                     Integer tableSize,
-                                     String sort);
+    Page<ProductDTO> findWithFilter(String productTitleFilter,
+                                    Integer minPriceFiler,
+                                    Integer maxPriceFilter,
+                                    Integer pageNumber,
+                                    Integer tableSize,
+                                    String sort);
 
 }

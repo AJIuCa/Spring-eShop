@@ -7,8 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.geekbrains.persist.repo.services.products.ProductRepr;
+import ru.geekbrains.persist.repo.services.products.ProductDTO;
 import ru.geekbrains.persist.repo.services.products.ProductService;
+
 
 import java.util.Optional;
 
@@ -32,7 +33,7 @@ public class ProductController {
                             @RequestParam("tableSize") Optional<Integer> tableSize,
                             @RequestParam("sort") Optional<String> sortBy) {
 
-        Page<ProductRepr> products = productService.findWithFilter(
+        Page<ProductDTO> products = productService.findWithFilter(
                 productTitleFilter.orElse(null),
                 minPriceFilter.orElse(null),
                 maxPriceFilter.orElse(null),

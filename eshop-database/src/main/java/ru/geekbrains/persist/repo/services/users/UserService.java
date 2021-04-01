@@ -7,13 +7,13 @@ import java.util.Optional;
 
 public interface UserService {
 
-    List<UserRepr> showAllUsers();
+    List<UserDTO> showAllUsers();
 
-    Optional<UserRepr> findById(long id);
+    Optional<UserDTO> findById(long id);
 
-    void save(UserRepr user);
+    void save(UserDTO user);
 
     void delete(long id);
 
-    Page<UserRepr> findWithFilter(String usernameFilter,Integer page, Integer tableSize, String sort);
+    Page<UserDTO> findWithFilter(String usernameFilter, Integer page, Integer tableSize, String sort);
 }

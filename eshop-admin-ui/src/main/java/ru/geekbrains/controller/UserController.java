@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.geekbrains.persist.repo.services.users.UserRepr;
+import ru.geekbrains.persist.repo.services.users.UserDTO;
 import ru.geekbrains.persist.repo.services.users.UserService;
 
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class UserController {
                            @RequestParam("tableSize") Optional<Integer> tableSize,
                            @RequestParam("sort") Optional<String> sort) {
 
-        Page<UserRepr> users = userService.findWithFilter(
+        Page<UserDTO> users = userService.findWithFilter(
                 userLoginFilter.orElse(null),
                 page.orElse(1) - 1,
                 tableSize.orElse(5),
