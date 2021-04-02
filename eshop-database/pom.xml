@@ -10,7 +10,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+
     <artifactId>eshop-database</artifactId>
+
 
     <properties>
         <timestamp>${maven.build.timestamp}</timestamp>
@@ -18,35 +20,9 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
 
         <dependency>
@@ -65,19 +41,7 @@
             <artifactId>h2</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-        </dependency>
-
     </dependencies>
-
 
     <build>
         <resources>
@@ -101,7 +65,7 @@
             <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
-                <version>4.3.1</version>
+                <version>${liquibase.version}</version>
                 <configuration>
                     <propertyFile>target/classes/liquibase-maven-plugin.properties</propertyFile>
                     <systemProperties>
@@ -112,7 +76,7 @@
                     <dependency>
                         <groupId>org.liquibase.ext</groupId>
                         <artifactId>liquibase-hibernate5</artifactId>
-                        <version>4.3.1</version>
+                        <version>${liquibase.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>org.springframework.boot</groupId>
@@ -123,6 +87,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
-
-

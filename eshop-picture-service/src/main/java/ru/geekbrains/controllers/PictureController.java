@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.geekbrains.persist.model.Product;
-import ru.geekbrains.persist.repo.services.picture.PictureService;
+import ru.geekbrains.service.PictureService;
+
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

@@ -1,97 +1,71 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
-    <!-- CSS links -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/bootadmin.min.css">
-
-    <title>ArtShop PlagueBrush</title>
-</head>
+<head th:replace="fragments/header :: head"></head>
 
 <body class="bg-light">
 
-<nav class="navbar navbar-expand navbar-dark bg-primary">
-    <!-- <a class="sidebar-toggle mr-3" href="#"><i class="fa fa-bars"></i></a> -->
-    <h1>Edit product</h1>
-
-    <!-- <div class="navbar-collapse collapse">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-envelope"></i> 5</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-bell"></i> 3</a></li>
-            <li class="nav-item dropdown">
-                <a href="#" id="dd_user" class="nav-link dropdown-toggle" data-toggle="dropdown"><i
-                        class="fa fa-user"></i> John Doe</a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd_user">
-                    <a href="#" class="dropdown-item">Profile</a>
-                    <a href="#" class="dropdown-item">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </div> -->
-</nav>
+<div th:replace="fragments/header :: header"></div>
 
 <div class="d-flex">
-    <div class="sidebar sidebar-dark bg-dark">
-        <!-- <ul class="list-unstyled">
-            <li><a href="users"><i class="fa fa-fw fa-link"></i>Edit Users</a></li>
-            <li><a href="roles"><i class="fa fa-fw fa-link"></i>Edit User Roles</a></li>
-            <hr style="color: white">
-            <li><a href="products"><i class="fa fa-fw fa-link"></i>Edit Products</a></li>
-            <li><a href="categories"><i class="fa fa-fw fa-link"></i>Edit Categories</a></li>
-        </ul> -->
-    </div>
+    <div th:replace="fragments/sidebar :: sidebar"></div>
 
     <div class="content p-4">
         <h2 class="mb-4">Products list</h2>
 
         <div class="card mb-4">
-            <div class="card-body">
 
-                <table class="table table-bordered my-2">
+            <div class="card-body">
+                <form class="form-group" th:action="@{/admin/product/create}">
+                    <button type="submit" class="btn btn-primary">Create new</button>
+                </form>
+
+                <table id="products" class="table table-hover" cellspacing="0" width="100%">
                     <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Manufacturer</th>
-                        <th scope="col">Actions</th>
-                    </tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Manufacturer</th>
+                    <th>Price</th>
+                    <th class="actions">Actions</th>
                     </thead>
                     <tbody>
-                    <tr th:each="product : ${products}">
-                        <th th:text="${product.id}" scope="row">1</th>
-                        <td th:text="${product.title}">Sprite</td>
-                        <td th:text="${product.manufacturer}">CocaCola</td>
-
+                    <tr th:each="prod : ${products}">
+                        <td th:text="${prod.id}"></td>
+                        <td th:text="${prod.title}"></td>
+                        <td th:text="${prod.category.title}"></td>
+                        <td th:text="${prod.manufacturer.title}"></td>
+                        <td th:text="${prod.price}"></td>
                         <td>
-                            <a class="btn btn-success" th:href="@{/products/{id}(id = ${product.id})}"><i
-                                    class="fas fa-edit"></i></a>
-                            <form class="d-inline" th:method="delete"
-                                  th:action="@{/products/{id}(id = ${product.id})}">
-                                <button type="submit" class="btn btn-danger"><i
-                                        class="far fa-trash-alt"></i></button>
+                            <a th:href="@{/admin/product/{id}/edit(id=${prod.getId()})}" class="btn btn-icon btn-pill btn-primary"
+                               data-toggle="tooltip" title="Edit">
+                                <i class="fa fa-fw fa-edit"></i>
+                            </a>
+                            <form th:action="@{/admin/product/{id}/delete(id=${prod.id})}" th:method="delete"
+                                  class="d-inline">
+                                <button class="btn btn-icon btn-pill btn-danger" data-toggle="tooltip" title="Delete">
+                                    <i class="fa fa-fw fa-trash"></i>
+                                </button>
                             </form>
                         </td>
                     </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
 </div>
 
-<!--<script src="js/jquery.min.js"></script>-->
-<!--<script src="js/bootstrap.bundle.min.js"></script>-->
-<!--<script src="js/bootadmin.min.js"></script>-->
-</body>
+<script th:replace="fragments/footer :: scripts"></script>
+<script th:src="@{/js/datatables.min.js}"></script>
+<script>
+    $(document).ready(function () {
+        $('#products').DataTable();
+    });
+</script>
 
+</body>
 </html>
+

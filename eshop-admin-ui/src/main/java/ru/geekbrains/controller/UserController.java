@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.geekbrains.persist.repo.services.users.UserDTO;
-import ru.geekbrains.persist.repo.services.users.UserService;
+import ru.geekbrains.service.users.UserDTO;
+import ru.geekbrains.service.users.UserService;
 
 import java.util.Optional;
 
