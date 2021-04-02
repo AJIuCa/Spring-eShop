@@ -1,5 +1,6 @@
-package ru.geekbrains.service.users;
+package ru.geekbrains.controller.DTO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import ru.geekbrains.persist.model.Role;
 import ru.geekbrains.persist.model.User;
 
@@ -20,6 +21,11 @@ public class UserDTO {
 
 
     private Set<Role> roles;
+
+//    @JsonIgnore
+//    @NotEmpty
+//    private String matchingPassword;
+
 
     public Long getId() {
         return id;
@@ -52,6 +58,14 @@ public class UserDTO {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+//    public String getMatchingPassword() {
+//        return matchingPassword;
+//    }
+
+//    public void setMatchingPassword(String matchingPassword) {
+//        this.matchingPassword = matchingPassword;
+//    }
 
     public UserDTO() {
     }

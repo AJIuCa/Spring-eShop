@@ -1,4 +1,6 @@
-package ru.geekbrains.controller.DTO.category;
+package ru.geekbrains.service.category;
+
+import ru.geekbrains.controller.DTO.CategoryDTO;
 
 import java.util.List;
 import java.util.Optional;

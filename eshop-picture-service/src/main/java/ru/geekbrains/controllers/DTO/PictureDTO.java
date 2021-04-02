@@ -1,4 +1,4 @@
-package ru.geekbrains.controller.DTO;
+package ru.geekbrains.controllers.DTO;
 
 import ru.geekbrains.persist.model.Picture;
 

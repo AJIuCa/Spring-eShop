@@ -1,4 +1,6 @@
-package ru.geekbrains.controller.DTO.manufacturer;
+package ru.geekbrains.service.manufacturer;
+
+import ru.geekbrains.controller.DTO.ManufacturerDTO;
 
 import java.util.List;
 import java.util.Optional;

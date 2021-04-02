@@ -1,4 +1,4 @@
-package ru.geekbrains.controller.DTO.manufacturer;
+package ru.geekbrains.controller.DTO;
 
 import ru.geekbrains.persist.model.Manufacturer;
 import ru.geekbrains.persist.model.Product;
@@ -10,11 +10,11 @@ import java.util.List;
 public class ManufacturerDTO {
 
     @Id
+    @NotEmpty
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
-
+    @NotEmpty
     private String title;
 
     private List<Product> products;

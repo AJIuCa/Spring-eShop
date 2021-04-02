@@ -1,10 +1,10 @@
-insert into `categories`(`name`)
+insert into `categories`(`title`)
 values
-('Men’s Fashion'),
-('Women’s Fashion'),
-('Phone & Accessories'),
-('Electronic Appliance'),
-('Computer & Networking'),
-('TV, Audio & Gaming'),
-('Office Supplies'),
-('All Categories');
+('Acrylic_Paints'),
+('Airbrushing'),
+('Art_Pencils'),
+('Art_Brushes'),
+('Accessories_for_airbrushing'),
+('Accessories_for_modeling'),
+('Air_Compressor'),
+('Tools_for_modeling');

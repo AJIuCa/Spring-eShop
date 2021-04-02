@@ -1,4 +1,4 @@
-package ru.geekbrains.controller.DTO.products;
+package ru.geekbrains.service.products;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -6,13 +6,16 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import ru.geekbrains.controller.DTO.ProductDTO;
 import ru.geekbrains.errors.NotFoundException;
 import ru.geekbrains.persist.model.Picture;
 import ru.geekbrains.persist.model.Product;
 import ru.geekbrains.persist.repo.ProductRepository;
 import ru.geekbrains.persist.repo.specification.ProductSpecification;
-import ru.geekbrains.controller.DTO.picture.PictureService;
+import ru.geekbrains.service.PictureService;
+
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -39,16 +42,18 @@ public class ProductServiceImpl implements ProductService, Serializable {
     }
 
     @Override
+    @Transactional
     public Optional<ProductDTO> findProductById(Long id) {
-        return Optional.empty();
+        return productRepository.findById(id).map(ProductDTO::new);
     }
+
 
     @Override
     public void saveProduct(ProductDTO productDTO) throws IOException {
 
         Product product = (productDTO.getId() != null) ? productRepository.findById(productDTO.getId())
                 .orElseThrow(NotFoundException::new) : new Product();
-//        product.setId(productDTO.getId());
+        product.setId(productDTO.getId());
         product.setTitle(productDTO.getTitle());
         product.setPrice(productDTO.getPrice());
         product.setManufacturer(productDTO.getManufacturer());

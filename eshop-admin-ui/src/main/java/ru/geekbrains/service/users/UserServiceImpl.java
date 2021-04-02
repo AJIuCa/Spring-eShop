@@ -1,4 +1,4 @@
-package ru.geekbrains.controller.DTO.users;
+package ru.geekbrains.service.users;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -7,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import ru.geekbrains.controller.DTO.UserDTO;
 import ru.geekbrains.persist.model.User;
 import ru.geekbrains.persist.repo.UserRepository;
 import ru.geekbrains.persist.repo.specification.UserSpecification;

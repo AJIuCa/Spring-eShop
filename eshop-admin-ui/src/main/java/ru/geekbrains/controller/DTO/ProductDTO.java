@@ -1,6 +1,7 @@
-package ru.geekbrains.controller.DTO.products;
+package ru.geekbrains.controller.DTO;
 
 import org.springframework.web.multipart.MultipartFile;
+import ru.geekbrains.controllers.DTO.PictureDTO;
 import ru.geekbrains.persist.model.Category;
 import ru.geekbrains.persist.model.Manufacturer;
 import ru.geekbrains.persist.model.Product;
@@ -11,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
-import ru.geekbrains.controller.DTO.picture.PictureDTO;
 
 import java.util.List;
 import java.util.Objects;
@@ -21,10 +21,12 @@ import java.util.stream.Collectors;
 public class ProductDTO {
 
     @Id
+    @NotEmpty
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-
+    @NotEmpty
     private String title;
 
 
@@ -32,7 +34,6 @@ public class ProductDTO {
 
 
     private Manufacturer manufacturer;
-
 
     private Category category;
 
@@ -43,12 +44,12 @@ public class ProductDTO {
     public ProductDTO() {
     }
 
-    public ProductDTO(@NotEmpty String title, @NotEmpty BigDecimal price, @NotEmpty Manufacturer manufacturer, @NotEmpty Category category) {
-        this.title = title;
-        this.price = price;
-        this.manufacturer = manufacturer;
-        this.category = category;
-    }
+//    public ProductDTO(@NotEmpty String title, @NotEmpty BigDecimal price, @NotEmpty Manufacturer manufacturer, @NotEmpty Category category) {
+//        this.title = title;
+//        this.price = price;
+//        this.manufacturer = manufacturer;
+//        this.category = category;
+//    }
 
     public ProductDTO(Product product) {
         this.id = product.getId();

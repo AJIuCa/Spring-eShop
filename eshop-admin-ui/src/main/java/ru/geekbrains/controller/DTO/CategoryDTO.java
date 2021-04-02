@@ -1,19 +1,21 @@
-package ru.geekbrains.controller.DTO.category;
+package ru.geekbrains.controller.DTO;
 
 import ru.geekbrains.persist.model.Category;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 public class CategoryDTO implements Serializable {
 
     @Id
+    @NotEmpty
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private long id;
 
+    @NotEmpty
     private String title;
 
     private long productCount;

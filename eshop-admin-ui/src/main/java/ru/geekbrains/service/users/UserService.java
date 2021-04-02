@@ -1,6 +1,7 @@
-package ru.geekbrains.controller.DTO.users;
+package ru.geekbrains.service.users;
 
 import org.springframework.data.domain.Page;
+import ru.geekbrains.controller.DTO.UserDTO;
 
 import java.util.List;
 import java.util.Optional;

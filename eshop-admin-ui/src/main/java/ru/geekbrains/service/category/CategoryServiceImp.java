@@ -1,7 +1,8 @@
-package ru.geekbrains.controller.DTO.category;
+package ru.geekbrains.service.category;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.geekbrains.controller.DTO.CategoryDTO;
 import ru.geekbrains.persist.model.Category;
 import ru.geekbrains.persist.repo.CategoryRepository;
 

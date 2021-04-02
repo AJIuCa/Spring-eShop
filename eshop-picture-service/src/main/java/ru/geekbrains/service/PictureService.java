@@ -1,4 +1,4 @@
-package ru.geekbrains.service.picture;
+package ru.geekbrains.service;
 
 import ru.geekbrains.persist.model.PictureData;
 import ru.geekbrains.persist.model.Product;

@@ -1,4 +1,4 @@
-package ru.geekbrains.controller.DTO.role;
+package ru.geekbrains.controller.DTO;
 
 import ru.geekbrains.persist.model.Product;
 import ru.geekbrains.persist.model.Role;
@@ -13,10 +13,11 @@ import java.util.List;
 public class RoleDTO {
 
     @Id
+    @NotEmpty
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @NotEmpty
     private String title;
 
     private List<User> users;

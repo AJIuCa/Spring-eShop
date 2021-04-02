@@ -1,4 +1,6 @@
-package ru.geekbrains.controller.DTO.role;
+package ru.geekbrains.service.role;
+
+import ru.geekbrains.controller.DTO.RoleDTO;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,5 +1,6 @@
-package ru.geekbrains.controller.DTO.role;
+package ru.geekbrains.service.role;
 
+import ru.geekbrains.controller.DTO.RoleDTO;
 import ru.geekbrains.persist.model.Role;
 import ru.geekbrains.persist.model.User;
 import ru.geekbrains.persist.repo.RoleRepository;

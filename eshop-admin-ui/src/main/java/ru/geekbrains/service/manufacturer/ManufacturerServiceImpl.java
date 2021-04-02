@@ -1,5 +1,6 @@
-package ru.geekbrains.controller.DTO.manufacturer;
+package ru.geekbrains.service.manufacturer;
 
+import ru.geekbrains.controller.DTO.ManufacturerDTO;
 import ru.geekbrains.persist.model.Manufacturer;
 import ru.geekbrains.persist.repo.ManufacturerRepository;
 
