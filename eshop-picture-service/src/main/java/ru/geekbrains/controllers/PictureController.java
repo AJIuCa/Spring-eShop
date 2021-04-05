@@ -41,6 +41,6 @@ public class PictureController {
     public String deletePicture(@PathVariable("pictureId") Long pictureId) {
         Product product = pictureService.getProductByPictureId(pictureId).get();
         pictureService.removePicture(pictureId);
-        return "redirect:/product/" + product.getId() + "/edit";
+        return "redirect:/admin/product/" + product.getId() + "/edit";
     }
 }

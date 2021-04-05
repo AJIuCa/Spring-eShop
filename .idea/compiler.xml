@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eshop-admin-ui" />
-        <module name="eshop-database" />
         <module name="eshop-picture-service" />
+        <module name="eshop-database" />
         <module name="eshop-ui" />
       </profile>
     </annotationProcessing>
