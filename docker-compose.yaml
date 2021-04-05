@@ -16,7 +16,7 @@ services:
       MYSQL_HOSTNAME: "db"
     command: bash -c "/apps/wait-for-mysql.sh db && /apps/entrypoint.sh"
 
-  shop-admin-ui:
+  eshop-admin-ui:
     image: ghcr.io/ajiuca/eshop-admin-ui:latest
     restart: always
     ports:
