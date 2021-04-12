@@ -1,0 +1,16 @@
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\Utils.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\Category.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\Role.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\CategoryRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\User.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\UserRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\ManufacturerRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\Manufacturer.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\ProductRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\PictureData.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\specification\UserSpecification.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\RoleRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\Product.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\PictureRepository.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\model\Picture.java
+D:\Spring-eShop\eshop-database\src\main\java\ru\geekbrains\persist\repo\specification\ProductSpecification.java

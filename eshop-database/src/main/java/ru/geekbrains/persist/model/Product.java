@@ -1,40 +1,43 @@
 package ru.geekbrains.persist.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "products")
-public class Product {
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(length = 64, nullable = false)
+    @Column(name = "title", length = 64, nullable = false)
     private String title;
 
-    @Column(length = 64, nullable = false)
-    private String manufacturer;
+    @Column(name = "price",length = 16, nullable = false)
+    private BigDecimal price;
 
-    @Column(length = 16, nullable = false)
-    private int price;
+    @ManyToOne(optional = false)
+    private Manufacturer manufacturer;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "products_categories",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    @ManyToOne(optional = false)
+    private Category category;
 
-    private Set<Category> categories;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<Picture> pictures;
 
     public Product() {
     }
 
-    public Product(Long id, String title, String manufacturer, int price) {
-        this.id = id;
+    public Product(String title, BigDecimal price, Category category, Manufacturer manufacturer) {
         this.title = title;
-        this.manufacturer = manufacturer;
         this.price = price;
+        this.category = category;
+        this.manufacturer = manufacturer;
     }
 
     public Long getId() {
@@ -53,20 +56,36 @@ public class Product {
         this.title = title;
     }
 
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public int getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public List<Picture> getPictures() {
+        return pictures;
+    }
+
+    public void setPictures(List<Picture> pictures) {
+        this.pictures = pictures;
     }
 
     @Override
@@ -75,6 +94,7 @@ public class Product {
                 "id=" + id +
                 ", title=" + title + '\'' +
                 ", manufacturer=" + manufacturer + '\'' +
+                ", category=" + category + '\'' +
                 ", price=" + price +
                 '}';
     }

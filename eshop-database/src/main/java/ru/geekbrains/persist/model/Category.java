@@ -18,7 +18,9 @@ public class Category implements Serializable {
     @Column(name = "title", unique = true, nullable = false)
     private String title;
 
-    @ManyToMany(mappedBy = "categories")
+    @OneToMany(
+            mappedBy = "category",
+            cascade = CascadeType.ALL)
     private List<Product> products;
 
     public Category() {

@@ -4,17 +4,16 @@
                    xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-    <include file="db.changelog-20210328-120627338.xml" relativeToChangelogFile="true" />
 
-    <changeSet id="1616926201763-110" author="ivan_od">
+
+    <changeSet id="1617288926583-21" author="ivan_od">
         <sqlFile dbms="mysql"
                  endDelimiter="\nGO"
                  relativeToChangelogFile="true"
                  splitStatements="true"
                  stripComments="true"
-                path="insert-default-product-price.sql" />
+                 path="insert-default-info.sql"/>
         <rollback/>
     </changeSet>
-
 
 </databaseChangeLog>

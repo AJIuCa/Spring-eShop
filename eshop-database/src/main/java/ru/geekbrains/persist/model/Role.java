@@ -14,8 +14,8 @@ public class Role implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", unique = true, nullable = false)
-    private String name;
+    @Column(name = "title", unique = true, nullable = false)
+    private String title;
 
     @ManyToMany(mappedBy = "roles")
     private List<User> users;
@@ -23,8 +23,8 @@ public class Role implements Serializable {
     public Role() {
     }
 
-    public Role(String name) {
-        this.name = name;
+    public Role(String title) {
+        this.title = title;
     }
 
     public Long getId() {
@@ -35,12 +35,12 @@ public class Role implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<User> getUsers() {
@@ -56,11 +56,11 @@ public class Role implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
-        return name.equals(role.name);
+        return title.equals(role.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(title);
     }
 }
