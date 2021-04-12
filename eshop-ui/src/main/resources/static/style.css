@@ -1,59 +1,3 @@
-/*-----------------------------------------------------------------------------------
-  Template Name: Tmart-Minimalist eCommerce HTML5 Template.
-  Template URI: #
-  Description: Tmart is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design corporate, corporate any other purposes websites.
-  Author: Theme365
-  Version: 1.0
-
-
------------------------------------------------------------------------------------
-  
-  CSS INDEX
-  ===================
-
-  01. Google fonts
-  02. Scroll To Top
-  03. Product Area
-  04. Log In Register Area
-  05. Bradcaump Area
-  06. Quickview Area
-  07. New Product Area
-  08. Best Product Area
-  09. Blog Area
-  10. Feature Product Area
-  11. Popular Product Area
-  12. Load More Area
-  13. Newsletter Area
-  14. Choose Us Area
-  15. Team Area
-  16. Testimonial Area
-  17. Our Brand Area
-  18. Our Shop Area
-  19. Our Shop Sidebar
-  20. Our Contact Area
-  21. Our Product Details Area
-  22. Wrapper Sidebar
-  23. Our Blog Details
-  24. Shop Details Area
-  25. Our Wishlist Area
-  26. Our Cart Area
-  27. Our Checkout Page
-  28. portfolio style
-
-
------------------------------------------------------------------------------------*/
-/*----------------------------------------*/
-/*  1. Google fonts
-/*----------------------------------------*/
-/*
-    font-family: 'Poppins', sans-serif;
-
-    font-family: 'Dosis', sans-serif;
-
-*/
-/*---------------------------------------
-  02. Scroll To Top
-----------------------------------------*/
 
 #scrollUp {
     border: 3px solid rgba(0, 0, 0, 0.1);
@@ -129,12 +73,9 @@
 #scrollUp {
     background: #cfcecc none repeat scroll 0 0;
 }
-/*---------------------------------------
-  End Scroll To Top
-----------------------------------------*/
-/*---------------------------------------
-  03. Product Area
-----------------------------------------*/
+
+
+
 
 .pro__thumb a {
     display: block;
@@ -622,11 +563,6 @@
 
 
 
-
-/*------------------------------
-  04. Log In Register Area
---------------------------------*/
-
 .single__tabs__panel.tab-pane:not(.active) {
     display: none;
 }
@@ -759,9 +695,7 @@
     color: #fff;
     border: 1px solid #ff4136;
 }
-/*------------------------------
-  05. Bradcaump Area
---------------------------------*/
+
 
 .ht__bradcaump__wrap {
     align-items: center;
@@ -791,9 +725,7 @@
 .bradcaump-inner {
     margin-top: 23px;
 }
-/*------------------------------
-  06. Quickview Area
---------------------------------*/
+
 
 #quickview-wrapper {
     position: relative;
@@ -955,9 +887,7 @@ h3.widget-title-modal {
     background: #ff4136 none repeat scroll 0 0;
     color: #fff;
 }
-/*------------------------------
-  07. New Product Area
---------------------------------*/
+
 
 .new__product {
     position: relative;
@@ -1011,9 +941,7 @@ h3.widget-title-modal {
 .new__product.text__align--left .new__product__btn {
     text-align: left;
 }
-/*------------------------------
-  08. Best Product Area
---------------------------------*/
+
 
 .best__product__thumb a {
     display: flex;
@@ -1117,9 +1045,7 @@ h3.widget-title-modal {
     font-size: 30px;
     line-height: 30px;
 }
-/*------------------------------
-  09. Blog Area
---------------------------------*/
+
 
 .blog__thumb a img {
     width: 100%;
@@ -1214,9 +1140,7 @@ h3.widget-title-modal {
 .blog--page {
     margin-top: -30px;
 }
-/*--------------------------
-    Blog Style 2
-----------------------------*/
+
 
 .blog--2 .blog__post__time {
     background: #f2f2f2 none repeat scroll 0 0;
@@ -1227,9 +1151,7 @@ h3.widget-title-modal {
 .blog--2 .blog__post__time {
     margin-bottom: 176px;
 }
-/*------------------------------
-  10. Feature Product Area
---------------------------------*/
+
 
 .feature__thumb a {
     display: block;
@@ -1322,9 +1244,7 @@ h3.widget-title-modal {
     padding-right: 45px;
     padding-top: 100px;
 }
-/*---------------------------------
-    Popular Product Style 2
-----------------------------------*/
+
 
 .popular__product--2 .popular__product__container .product__action::before,
 .product__style--7 .product__action::before {
@@ -1429,9 +1349,7 @@ h3.widget-title-modal {
 .variation_product .product__details {
     text-align: left;
 }
-/*---------------------------------
-    Popular Product Style 3
-----------------------------------*/
+
 
 .popular__product--2 .product__menu {
     text-align: center;
@@ -1444,9 +1362,7 @@ h3.widget-title-modal {
     background: #fff none repeat scroll 0 0;
     opacity: 0.85;
 }
-/*---------------------------------
-    Popular Product Style 4
-----------------------------------*/
+
 
 .popular__product--4 .product__action {
     display: block;
@@ -1502,9 +1418,7 @@ h3.widget-title-modal {
 .popular__product--4 .pro__thumb {
     text-align: center;
 }
-/*---------------------------------
-    Popular Product Style 6
-----------------------------------*/
+
 
 .wrap__box__style--2 {
     background: #fff none repeat scroll 0 0;
@@ -1590,7 +1504,7 @@ h3.widget-title-modal {
 .popular__product--6 .product {
     margin-top: 4px;
 }
-/*.popular__product--5*/
+
 
 .product__style--5 .pro__thumb a {
     position: relative;
@@ -1634,9 +1548,6 @@ h3.widget-title-modal {
     margin-left: -15px;
     margin-right: -15px;
 }
-/*----------------------
-product__style--7
----------------------*/
 
 .product__style--7 .product:hover .product__details {
     bottom: 20px;
@@ -1654,9 +1565,7 @@ product__style--7
     border: 1px solid #666666;
     color: #4b4b4b;
 }
-/*------------------------------
-  12. Load More Area
---------------------------------*/
+
 
 .htc__loadmore__btn {
     text-align: center;
@@ -1677,9 +1586,7 @@ product__style--7
     color: #fff;
     background: #ff4136;
 }
-/*------------------------------
-  13. Newsletter Area
---------------------------------*/
+
 
 .htc__newsletter__area .newsletter__container {
     padding: 120px 0;
@@ -1722,9 +1629,7 @@ product__style--7
     text-indent: -999px;
     z-index: 5;
 }
-/*------------------------------
-  14. Choose Us Area
---------------------------------*/
+
 
 .store__btn {
     margin-top: 47px;
@@ -1814,9 +1719,7 @@ product__style--7
     position: relative;
     z-index: 1;
 }
-/*------------------------------
-  15. Team Area
---------------------------------*/
+
 
 .team__thum a {
     display: block;
@@ -1880,13 +1783,13 @@ product__style--7
 }
 .team__thumb a img {
     -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
+
     
     filter: grayscale(100%);
 }
 .team:hover .team__thumb a img {
     -webkit-filter: grayscale(0%);
-    /* Safari 6.0 - 9.0 */
+
     
     filter: grayscale(00%);
 }
@@ -1898,9 +1801,7 @@ product__style--7
 .htc__team__page .team__wrap {
     margin-top: -30px;
 }
-/*------------------------------
-  16. Testimonial Area
---------------------------------*/
+
 
 .testimonial__wrap {
     position: relative;
@@ -1937,9 +1838,7 @@ product__style--7
     display: block;
     width: auto;
 }
-/*------------------------------
-  17. Our Brand Area
---------------------------------*/
+
 
 .brand__list {
     display: flex;
@@ -1948,9 +1847,7 @@ product__style--7
 .brand__list a {
     display: block;
 }
-/*------------------------------
-  18. Our Shop Area
---------------------------------*/
+
 
 .shop__page .product__menu {
     text-align: left;
@@ -2039,9 +1936,7 @@ product__style--7
 .filter__list.sidebar__list li {
     line-height: 24px;
 }
-/*------------------------------
-  19. Our Shop Sidebar
---------------------------------*/
+
 
 .section-title-4 {
     font-size: 18px;
@@ -2159,9 +2054,7 @@ product__style--7
 .slider__range--output {
     margin-top: 18px;
 }
-/*--------------------------
-    Shop Right SideBar
-----------------------------*/
+
 
 .producy__view__container {
     display: flex;
@@ -2219,9 +2112,7 @@ select.select-color {
 .single-grid-view .product {
     margin-top: 50px;
 }
-/*------------------------------
-  20. Our Contact Area
---------------------------------*/
+
 
 #googleMap {
     height: 633px;
@@ -2344,9 +2235,7 @@ select.select-color {
     color: #666666 !important;
     opacity: 1;
 }
-/*-----------------------------------------------
-  21. Our Product Details Area
----------------------------------------------------*/
+
 
 .product__details__container {
     display: flex;
@@ -2732,9 +2621,7 @@ select.select-color {
     color: #333 !important;
     opacity: 1 !important;
 }
-/*-----------------------------------------------
-  22. Wrapper Sidebar
----------------------------------------------------*/
+
 
 .wrapper__sidebar .container-fluid {
     width: 90%;
@@ -2782,7 +2669,7 @@ select.select-color {
 .sidebar--logo {
     padding-bottom: 60px;
 }
-/* Menu Style */
+
 
 .wrapper__sidebar .main__menu {
     display: flex;
@@ -2805,7 +2692,7 @@ select.select-color {
     margin-bottom: 50px;
     max-height: 350px;
 }
-/* Tools */
+
 
 .wrapper__sidebar .menu-extra {
     justify-content: center;
@@ -2910,9 +2797,7 @@ select.select-color {
         display: none;
     }
 }
-/*---------------------------------------
-  23. Our Blog Details
-----------------------------------------*/
+
 
 .blog-details-thumb {
     background: #f6f6f6 none repeat scroll 0 0;
@@ -3299,9 +3184,7 @@ blockquote::before {
     border: 1px solid #ff4136;
     color: #fff;
 }
-/*-------------------------------------
-  24. Shop Details Area
-------------------------------------*/
+
 
 .single__list__content {
     margin-top: 50px;
@@ -3358,9 +3241,7 @@ blockquote::before {
     background: rgba(0, 0, 0, 0) url("images/icons/select-option.png") no-repeat scroll 83% 8px / 14px 9px;
     padding-right: 50px;
 }
-/*---------------------------------------
-  25. Our Wishlist Area
-----------------------------------------*/
+
 
 .wishlist-table table {
     background: #fff none repeat scroll 0 0;
@@ -3440,9 +3321,7 @@ blockquote::before {
     justify-content: center;
     margin-top: 10px;
 }
-/*---------------------------------------
-  26. Our Cart Area
-----------------------------------------*/
+
 
 .cart-title-area {
     padding-top: 30px;
@@ -3705,9 +3584,7 @@ a.shipping-calculator-button:hover {
 .coupon p {
     margin-bottom: 12px;
 }
-/*---------------------------------------
-  27. Our Checkout Page
-----------------------------------------*/
+
 
 .single-checkout-box input[type="text"],
 .single-checkout-box input[type="email"],
@@ -3839,7 +3716,7 @@ a.shipping-calculator-button:hover {
 }
 
 
-/* 28. portfolio style */
+
 
 .res-portfolio .hover-title {
   padding: 20px 12px;
@@ -4152,3 +4029,75 @@ a.shipping-calculator-button:hover {
 :focus {
     outline: -webkit-focus-ring-color auto 0px;
 }
+
+
+
+
+  .pagination_area {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .pagination_area .pagination {
+    display: inline-block;
+    border-radius: 0px;
+  }
+
+  .pagination_area .pagination li {
+    display: inline-block;
+  }
+
+  .pagination_area .pagination li a {
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #333333;
+    border-radius: 0px !important;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 400ms linear 0s;
+  }
+
+  .pagination_area .pagination li:first-child a {
+    border: 1px solid #000002;
+  }
+  
+  .pagination_area .pagination li.next a {
+    background: #333333;
+    color: #fff;
+  }
+  
+  .pagination_area .pagination li:hover a {
+    background: #333333;
+    color: #fff;
+  }
+
+.plus-minus-input {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.plus-minus-input .input-group-field {
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.plus-minus-input .input-group-button .circle {
+    border-radius: 50%;
+    padding: 0.25em 0.8em;
+}
+
+
+
+

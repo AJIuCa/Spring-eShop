@@ -3,12 +3,15 @@ package ru.geekbrains.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.geekbrains.controllers.DTO.PictureDTO;
 import ru.geekbrains.persist.model.Picture;
 import ru.geekbrains.persist.model.PictureData;
 import ru.geekbrains.persist.model.Product;
 import ru.geekbrains.persist.repo.PictureRepository;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class PictureServiceBlobImpl implements PictureService {
@@ -50,5 +53,16 @@ public class PictureServiceBlobImpl implements PictureService {
     public void removePicture(long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public Optional<PictureDTO> findPictureById(Long id) {
+        return repository.findById(id).map(PictureDTO::new);
+    }
+
+    @Override
+    public List<PictureDTO> showAllPictures() {
+        return repository.findAll().stream().map(PictureDTO::new).collect(Collectors.toList());
+    }
 }
+
 

@@ -36,11 +36,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/css/*").permitAll()
-                .antMatchers("/js/*").permitAll()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/js/**").permitAll()
                 .antMatchers("/webfonts/*").permitAll()
                 .antMatchers("/webjars/**").permitAll()
                 .antMatchers("/admin/**").authenticated()
+                .antMatchers("/resources/**").permitAll()
 //                .antMatchers("/").permitAll()
 
                 .and()

@@ -9,6 +9,9 @@ public class EshopUiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EshopUiApplication.class, args);
+
+
+
     }
 
 }

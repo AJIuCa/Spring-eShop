@@ -1,8 +1,10 @@
 package ru.geekbrains.service;
 
+import ru.geekbrains.controllers.DTO.PictureDTO;
 import ru.geekbrains.persist.model.PictureData;
 import ru.geekbrains.persist.model.Product;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface PictureService {
@@ -16,4 +18,8 @@ public interface PictureService {
     Optional<Product> getProductByPictureId(long id);
 
     void removePicture(long id);
+
+    Optional<PictureDTO> findPictureById (Long id);
+
+    List<PictureDTO> showAllPictures();
 }
