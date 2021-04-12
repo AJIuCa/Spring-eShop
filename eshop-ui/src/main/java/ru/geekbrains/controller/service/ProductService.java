@@ -1,6 +1,7 @@
 package ru.geekbrains.controller.service;
 
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 import ru.geekbrains.controller.DTO.ProductDTO;
 import ru.geekbrains.persist.model.Picture;
 import ru.geekbrains.persist.model.Product;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public interface ProductService {
 
 

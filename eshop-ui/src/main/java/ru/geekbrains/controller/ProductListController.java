@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.geekbrains.controller.DTO.ProductDTO;
 import ru.geekbrains.controller.service.ProductService;
-import ru.geekbrains.errors.NotFoundException;
 import ru.geekbrains.persist.repo.CategoryRepository;
 import ru.geekbrains.persist.repo.ManufacturerRepository;
 import ru.geekbrains.service.PictureService;
@@ -25,7 +24,10 @@ public class ProductListController {
     private final PictureService pictureService;
     private final ManufacturerRepository manufacturerRepository;
 
-    public ProductListController(ProductService productService, CategoryRepository categoryRepository, PictureService pictureService, ManufacturerRepository manufacturerRepository) {
+    public ProductListController(ProductService productService,
+                                 CategoryRepository categoryRepository,
+                                 PictureService pictureService,
+                                 ManufacturerRepository manufacturerRepository) {
         this.productService = productService;
         this.categoryRepository = categoryRepository;
         this.pictureService = pictureService;
