@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ru.geekbrains.controller.DTO.ProductDTO;
 import ru.geekbrains.controller.service.ProductService;
 import ru.geekbrains.errors.NotFoundException;
-import ru.geekbrains.persist.model.Product;
 import ru.geekbrains.persist.repo.CategoryRepository;
 import ru.geekbrains.persist.repo.ManufacturerRepository;
 import ru.geekbrains.service.PictureService;
@@ -76,8 +75,8 @@ public class ProductListController {
 
 
     @GetMapping("/product/{id}")
-    public String showProduct(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("product", productService.findById(id).orElseThrow(NotFoundException::new));
+    public String showProduct(@PathVariable("id") Long id, Model model) throws Exception {
+        model.addAttribute("product", productService.findById(id).orElseThrow(Exception::new));
         return "product-details-sticky-right";
     }
 

@@ -10,9 +10,8 @@ import ru.geekbrains.controller.DTO.CartItemDTO;
 import ru.geekbrains.controller.DTO.ProductDTO;
 import ru.geekbrains.controller.service.CartService;
 import ru.geekbrains.controller.service.ProductService;
-import ru.geekbrains.errors.NotFoundException;
 
-import java.util.Optional;
+
 
 @Controller
 @RequestMapping("/cart")
@@ -36,8 +35,8 @@ public class CartController {
     }
 
     @PostMapping
-    public  String addToCart(CartItemDTO cartItemDTO){
-        ProductDTO productDTO= productService.findById(cartItemDTO.getProductId()).orElseThrow(NotFoundException::new);
+    public  String addToCart(CartItemDTO cartItemDTO) throws Exception {
+        ProductDTO productDTO= productService.findById(cartItemDTO.getProductId()).orElseThrow(Exception::new);
         cartService.addProductQty(productDTO, cartItemDTO.getQty());
         return "redirect:/cart";
     }
